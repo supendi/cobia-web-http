@@ -1,0 +1,27 @@
+{
+  "name": "@cobia/http",
+  "version": "1.0.0",
+  "description": "The Cobia API Http client",
+  "main": "dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc",
+    "clean-compile": "yarn clean && yarn compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supendi/cobia-web-http.git"
+  },
+  "author": "Supendi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supendi/cobia-web-http/issues"
+  },
+  "homepage": "https://github.com/supendi/cobia-web-http#readme",
+  "dependencies": {},
+  "types": "dist/index.d.ts"
+}
