@@ -1,4 +1,4 @@
-import httpClient from "./http.client"
+import httpClient from "./lib/http.client"
 import { Account, Registrant } from "@cobia/types"
 
 //account api http client

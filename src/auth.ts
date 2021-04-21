@@ -1,4 +1,4 @@
-import httpClient from "./http.client"
+import httpClient from "./lib/http.client"
 import { LoginRequest } from "@cobia/types"
 
 //auth api http client
