@@ -1,7 +1,6 @@
 import { AxiosError, AxiosResponse } from "axios"
 import { HttpErrorResponse, HttpNetworkErrorResponse, HttpResponse } from "./http.types"
-import { ServerError } from "../lib/validator"
-import globalDictionary from "./dictionary"
+import { ServerError } from "@cobia/lib"
 
 //so far I can only detect a network error from the message property of an axios error
 const isNetworkError = (error: any): boolean => {
@@ -34,11 +33,11 @@ function createNetworkError(axiosErrorResponse: any): HttpNetworkErrorResponse<S
             headers: axiosErrorResponse.config.headers
         },
         data: {
-            message: globalDictionary.networkError,
+            message: "Network Error",
             errors: []
         },
         status: 0,
-        statusText: globalDictionary.networkError,
+        statusText: "Network Error",
         isNetworkError: true,
         isHttpError: true,
         hasError: false
