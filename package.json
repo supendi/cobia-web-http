@@ -10,12 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./dist",
     "compile": "tsc",
-    "clean-compile": "yarn clean && yarn compile",
-    "remove-cobia": "yarn remove @cobia/types && yarn remove @cobia/lib",
-    "compile-lib": "cd ../cobia-web-lib && yarn clean-compile",
-    "compile-types": "cd ../cobia-types-ts && yarn clean-compile",
-    "add-cobia": "yarn add ../cobia-types-ts && yarn add ../cobia-web-lib",
-    "update-cobia": "yarn compile-lib && yarn compile-types && yarn remove-cobia && yarn add-cobia",
+    "build": "yarn clean && yarn compile",
+    "remove-cobia": "yarn remove @cobia/types",
+    "build-types": "cd ../cobia-types-ts && yarn build",
+    "add-cobia": "yarn add ../cobia-types-ts",
+    "update-cobia": "yarn build-types && yarn remove-cobia && yarn add-cobia",
     "clean-node-modules": "rm -rf ./node_modules && rm yarn.lock"
   },
   "repository": {
@@ -29,7 +28,6 @@
   },
   "homepage": "https://github.com/supendi/cobia-web-http#readme",
   "dependencies": {
-    "@cobia/lib": "../cobia-web-lib",
     "@cobia/types": "../cobia-types-ts",
     "axios": "^0.21.1"
   },

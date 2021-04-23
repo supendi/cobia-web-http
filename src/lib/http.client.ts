@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { HttpErrorResponse, HttpNetworkErrorResponse, HttpResponse } from './http.types';
 import axiosHttpHelper from './http.helper'
-import { ServerError } from '@cobia/lib';
+import { ServerError } from './types';
 
 //axios instance
 const http = axios.create({
