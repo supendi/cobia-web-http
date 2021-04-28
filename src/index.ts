@@ -1,4 +1,5 @@
 import accountHttp from './account'
-import authHttp from './auth'
+import notificationHttp from './notification'
+import authHttp from './notification'
 
-export { accountHttp, authHttp }
+export { accountHttp, notificationHttp, authHttp }
