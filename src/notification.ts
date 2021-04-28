@@ -3,8 +3,8 @@ import { UpdateViewRequest } from "@cobia/types"
 
 //auth api http client
 const notificationHttp = {
-    login: (loginReq: UpdateViewRequest) => {
-        return httpClient.put<any, UpdateViewRequest>('/auth', loginReq)
+    put: (updateReq: UpdateViewRequest) => {
+        return httpClient.put<any, UpdateViewRequest>('/notifications/view', updateReq)
     }
 }
 
