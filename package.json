@@ -11,10 +11,6 @@
     "clean": "rm -rf ./dist",
     "compile": "tsc",
     "build": "yarn clean && yarn compile",
-    "remove-cobia": "yarn remove @cobia/types",
-    "build-types": "cd ../cobia-types-ts && yarn build",
-    "add-cobia": "yarn add ../cobia-types-ts",
-    "update-cobia": "yarn build-types && yarn remove-cobia && yarn add-cobia",
     "clean-node-modules": "rm -rf ./node_modules && rm yarn.lock"
   },
   "repository": {
@@ -28,7 +24,7 @@
   },
   "homepage": "https://github.com/supendi/cobia-web-http#readme",
   "dependencies": {
-    "@cobia/types": "../cobia-types-ts",
+    "@cobia/types": "git+https://github.com/supendi/cobia-types-ts.git#release/v1.0.0",
     "axios": "^0.21.1"
   },
   "types": "dist/index.d.ts",
